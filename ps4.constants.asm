@@ -1523,6 +1523,7 @@ EventFlag_Juza = $41	; Set when you fight Juza
 EventFlag_Zio = $42	; Set when you fight Zio for the first time
 EventFlag_MachineCenter = $43	; Set after Machine Center appears
 EventFlag_LandRover = $44	; Set when you get the Land Rover
+EventFlag_FortuneTeller = $45	; Set when talking to the fortune teller in Aiedo with Alys
 EventFlag_GirlsCaught = $46	; Set after resting in the Aiedo supermarket and the girls get arrested
 EventFlag_DemiJoined = $47	; Set after Zio wounds Alys and you decide to go find Rune
 EventFlag_JuzaDefeated = $48	; Set after the battle against Juza and the stairs appear
