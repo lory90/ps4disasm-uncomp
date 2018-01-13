@@ -2157,6 +2157,8 @@ Saved_Char_ID_Mem_3 = ramaddr($FFFFED56)
 Saved_Char_ID_Mem_4 = ramaddr($FFFFED57)
 Saved_Char_ID_Mem_5 = ramaddr($FFFFED58)
 
+Current_Dialogue_Tree = ramaddr($FFFFED60)
+
 Battle_Priority = ramaddr($FFFFEE45)	; 0 = normal; 1 = surprise attack; $FF = ambush
 
 Ability_Effect_Type = ramaddr($FFFFEE4A)	; word ;
