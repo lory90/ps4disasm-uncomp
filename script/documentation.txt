@@ -1,0 +1,30 @@
+; =================================================================
+; Control Codes
+; $F2 = Determines actions during dialogues. The byte after this has the following values:
+		0 = Loads Panel; the word after this is the Panel index
+		1 = Destroys panel loaded last
+		2 = Destroys all panels
+		3 = Loads sound; the byte after this is the Sound index
+		4 = Loads sound; the byte after this is the Sound index
+		6 = Updates palettes
+		7 = Zio's eyes turn red in one of his panels (before the battle)
+		8 = Pauses music
+		9 = Resumes music
+		$A = For the spaceship sabotage, plays alarm sound and turns the screen red
+		$B = Sets event flag
+		$C = After the Profound Darkness battle, it updates stuff when Elsydeon breaks
+; $F3 = NPC keeps its original facing direction
+; $F4 = Loads portrait right above the dialogue window; the byte after this holds the portrait index
+; $F5 = Brings up the Yes/No window; the 2 bytes after this hold the index of dialogue to load next;
+		if $00, then it stays in the current dialogue
+; $F6 = Loads event; the word after this holds the Event index
+; $F7 = Closes window and resumes dialogue; this is handled externally, mainly in the event section
+; $F9 = Pauses dialogue processing; the byte after this holds the number of frames to pause it at
+; $FA = Event check; the 2 bytes after this determine the following:
+		byte 1 = event flag: if this is set, then it loads a new dialogue whose index is in the next byte
+		byte 2 = index of new dialogue to load; index is relative to the current dialogue
+; $FC = Newline
+; $FD = Loads the arrow cursor in the bottom right corner of the dialogue window
+; $FE = Same as $F7
+; $FF = Terminates dialogue
+; =================================================================
