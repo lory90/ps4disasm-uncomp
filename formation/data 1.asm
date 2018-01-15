@@ -18,31 +18,31 @@
 ; 0
 	dc.b	$10, $00, $08, ItemID_Antidote, $02, $03, $00, EnemyID_MonsterFly, $0E, EnemyID_MonsterFly, $1A, $FF
 
-; $1
+; 1
 	dc.b	$10, $00, $08, ItemID_Antidote, $03, $07, $00, EnemyID_MonsterFly, $09, EnemyID_MonsterFly, $14, EnemyID_MonsterFly, $1F, $FF
 
-; $2
+; 2
 	dc.b	$10, $00, $08, ItemID_Antidote, $04, $0F, $00, EnemyID_MonsterFly, $08, EnemyID_MonsterFly, $10, EnemyID_MonsterFly, $18, EnemyID_MonsterFly, $20, $FF
 
-; $3
+; 3
 	dc.b	$0E, $00, $00, $00, $02, $03, $00, EnemyID_Crawler, $0E, EnemyID_Crawler, $1A, $FF
 
-; $4
+; 4
 	dc.b	$0E, $00, $00, $00, $03, $07, $00, EnemyID_Crawler, $09, EnemyID_Crawler, $14, EnemyID_Crawler, $1F, $FF
 
-; $5
+; 5
 	dc.b	$0E, $00, $00, $00, $04, $0F, $00, EnemyID_Crawler, $08, EnemyID_Crawler, $10, EnemyID_Crawler, $18, EnemyID_Crawler, $20, $FF
 
-; $6
+; 6
 	dc.b	$0F, $00, $00, $00, $02, $03, $00, EnemyID_MiniWorm, $0E, EnemyID_MiniWorm, $1A, $FF
 
-; $7
+; 7
 	dc.b	$0F, $00, $00, $00, $03, $07, $00, EnemyID_MiniWorm, $09, EnemyID_MiniWorm, $14, EnemyID_MiniWorm, $1F, $FF
 
-; $8
+; 8
 	dc.b	$0F, $00, $00, $00, $04, $0F, $00, EnemyID_MiniWorm, $08, EnemyID_MiniWorm, $10, EnemyID_MiniWorm, $18, EnemyID_MiniWorm, $20, $FF
 
-; $9
+; 9
 	dc.b	$10, $00, $08, ItemID_Antidote, $02, $01, $02, EnemyID_MonsterFly, $0E, EnemyID_Crawler, $9A, $FF
 
 ; $A
