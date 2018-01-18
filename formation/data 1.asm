@@ -2,16 +2,36 @@
 ; Formation data can take up 16 bytes max, including the delimiter $FF.
 ; Each formation is variable-length, so number of bytes depends on how many enemies there are
 ;
+; Byte 1 = Surprise rate; used in the calculation for normal attack, surprise attack and ambush logic; formula is
+;
+;		2((Agi-Surp)+RNG)
+;
+;	where Agi is the agility of the fastest character in the party, Surp the Surprise rate, and RNG a random number between 0 and 63.
+;	If the result is <= 12, it's an ambush.
+;	If the result is > 12 and <= 116, it's a normal attack.
+;	If the result is > 116, it's a surprise attack.
+; Byte 2 = Escape rate; used in the calculation for running away; formula is
+;
+;		2((Agi-Esc)+RNG)
+;
+;	where Agi is the agility of the fastest character in the party, Esc the Escape rate, and RNG a random number between 0 and 63.
+;	If the result is > 40, you manage to escape 
 ; Byte 3 = Item drop rate
 ; Byte 4 = Item dropped
+; Byte 5 = Number of enemies; seems only used inside the Slasher attack functionality
+; Byte 6 = ?
+; Byte 7 = ?
 ; Byte 8 = Enemy 1
-; Byte 9 = Enemy 1 X position
+; Byte 9 = enemy 1 X pos base value; to get the actual X position, multiply base value by 8 and add 128, so
+;
+;		X pos = (base*8)+128
+;
 ; Byte 10 = Enemy 2; if not present, it's $FF
-; Byte 11 = Enemy 2 X position
+; Byte 11 = Enemy 2 X pos base value; see Byte 9
 ; Byte 12 = Enemy 3; if not present, it's $FF
-; Byte 13 = Enemy 3 X position
+; Byte 13 = Enemy 3 X pos base value; see Byte 9
 ; Byte 14 = Enemy 4; if not present, it's $FF
-; Byte 15 = Enemy 4 X position
+; Byte 15 = Enemy 4 X pos base value; see Byte 9
 ; Byte 16 = $FF if all 4 enemies are present
 ; =================================================================
 
