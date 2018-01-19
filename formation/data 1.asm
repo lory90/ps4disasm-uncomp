@@ -18,7 +18,7 @@
 ;	If the result is > 40, you manage to escape 
 ; Byte 3 = Item drop rate
 ; Byte 4 = Item dropped
-; Byte 5 = Number of enemies; seems only used inside the Slasher attack functionality
+; Byte 5 = Total number of enemies
 ; Byte 6 = Position number for the first group; bitfield; for example $01 means there's only one enemy in the first group,
 ;			$03 means there are 2 and so on
 ; Byte 7 = Position number for the second group; bitfield; same as Byte 6; the position number is relative to the one from byte 6,
