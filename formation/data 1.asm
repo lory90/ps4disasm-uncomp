@@ -19,10 +19,10 @@
 ; Byte 3 = Item drop rate
 ; Byte 4 = Item dropped
 ; Byte 5 = Total number of enemies
-; Byte 6 = Position number for the first group; bitfield; for example $01 means there's only one enemy in the first group,
-;			$03 means there are 2 and so on
-; Byte 7 = Position number for the second group; bitfield; same as Byte 6; the position number is relative to the one from byte 6,
-;			meaning it there are 2 enemies in the first group, then the position number in this byte should start from 3
+; Byte 6 = bitfield; applies to the first enemy group; each bit corresponds to the position each enemy appears in bytes 8, 10, 12 and 14;
+;			for example, if a Crawler shows up in the 3rd spot (Byte 12) and you want it to be on the first group, you should set this value
+;			to $04 (3rd bit set). The same types of enemies should belong to the same group.
+; Byte 7 = bitfield; same as Byte 6, but applies to the second enemy group.
 ; Byte 8 = Enemy 1
 ; Byte 9 = enemy 1 X pos base value; to get the actual X position, multiply base value by 8 and add 128, so
 ;
