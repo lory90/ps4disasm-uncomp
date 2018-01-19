@@ -19,8 +19,10 @@
 ; Byte 3 = Item drop rate
 ; Byte 4 = Item dropped
 ; Byte 5 = Number of enemies; seems only used inside the Slasher attack functionality
-; Byte 6 = ?
-; Byte 7 = ?
+; Byte 6 = Position number for the first group; bitfield; for example $01 means there's only one enemy in the first group,
+;			$03 means there are 2 and so on
+; Byte 7 = Position number for the second group; bitfield; same as Byte 6; the position number is relative to the one from byte 6,
+;			meaning it there are 2 enemies in the first group, then the position number in this byte should start from 3
 ; Byte 8 = Enemy 1
 ; Byte 9 = enemy 1 X pos base value; to get the actual X position, multiply base value by 8 and add 128, so
 ;
