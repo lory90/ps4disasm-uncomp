@@ -2150,7 +2150,7 @@ Panel_Data = ramaddr($FFFFED10)
 
 Town_Teleport_Flag = ramaddr($FFFFED50)	; if 0, you can use Ryuka and Telepipe
 Dungeon_Teleport_Index = ramaddr($FFFFED51)	; index which determines the coordinates you get teleported at (through Escapipe or Hinas) for every dungeon; if 0, teleport doesn't work
-
+Yes_No_Option = ramaddr($FFFFED53)		; byte ; 0 = Yes; 1 = No
 Saved_Char_ID_Mem_1 = ramaddr($FFFFED54)
 Saved_Char_ID_Mem_2 = ramaddr($FFFFED55)
 Saved_Char_ID_Mem_3 = ramaddr($FFFFED56)
