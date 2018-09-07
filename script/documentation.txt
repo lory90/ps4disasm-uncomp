@@ -19,7 +19,7 @@
 		if $00, then it stays in the current dialogue
 ; $F6 = Loads event; the word after this holds the Event index
 ; $F7 = Closes window and resumes dialogue; this is handled externally, mainly in the event section
-; $F9 = Pauses dialogue processing; the byte after this holds the number of frames to pause it at
+; $F9 = Pauses dialogue processing; the byte after this holds the number of frames to pause it for
 ; $FA = Event check; the 2 bytes after this determine the following:
 		byte 1 = event flag: if this is set, then it loads a new dialogue whose index is in the next byte
 		byte 2 = index of new dialogue to load; index is relative to the current dialogue
