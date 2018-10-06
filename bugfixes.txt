@@ -1,0 +1,73 @@
+- Level 99 fix.
+
+- Fixed level 99 bug exclusive to Seth.
+
+- The Tornado Dagger name now displays correctly in battle (TORNDAGGER instead of ORNDAGGER).
+
+- When characters level up, their stats are not updated until you check their equipment or their status screen, or when you use the Order command.
+  This patch has had this behavior corrected.
+  
+- Vision now uses the Mental stat of the caster rather than a fixed value.
+
+- Lowered stat deficits of the Shadow Blade so that Chaz's stats underflow will no longer happen before level 5.
+
+- Now Chaz is revived after the battle against Zio to prevent a Game Over if Chaz, Rika and Rune are dead.
+
+- Fixed incorrect logic for palette cycling in the Air Castle.
+
+- Fixed Wren usage number for Posibolt at level 91.
+
+- Stats are now updated for Chaz when you get the Elsydeon.
+
+- When you go into the menu immediately after opening the chests containing the Canceller in Zelan and the rings in the Rykros towers,
+  the event flags needed to trigger subsequent cutscenes won't be set. This has been addressed so it no longer happens.
+
+- Chaz will no longer say "This is terrible!" when examining the houses in Ryuon.
+
+- Fixed collision detection for Reshel, Island Cave and Elsydeon cave.
+
+- When you select an option while holding a directional button, the cursor will skip to the next option. For example, if you're on
+  ITEM and want to select TECH right below, you will accidentally select SKILL instead of TECH. This is particularly annoying when you do
+  fast inputs. This has been addressed in this patch.
+
+- In Aiedo, the blue-haired NPC who likes Alys will no longer cause a softlock when he runs away and collides with walls and trees.
+
+- Fixed graphics and RAM corruption bug that happens when you press Cancel at a specific frame after making a selection on the
+  Message speed, Battle speed, Buttons, Macro Skill list and Macro confirm windows.
+  
+- Fixed graphics glitch when you press Cancel in the Aiedo bakery shop list.
+
+- Fixed map layout for the Island Cave.
+
+- The Psy-Robe now grants protection against psychic attacks like the other Psy gear.
+
+- When you use Ryuka before finishing the first mission in Piata, you're automatically teleported to Piata. This event causes
+  dialogue boxes to be empty when talking to NPCs. This will no longer happen.
+  
+- When a character has a shield that protects against an element, that element is also applied to the equipped weapon. This patch ensures only
+  the equipped weapon elements are taken into account when you attack.
+
+- Some armors and gears provide resistance against physical attacks so you take as much damage as when you use the Defend command. However
+  such equipment and Defend share the same value in RAM, with Defend taking precedence over the armor resistance, so any kind of protection granted
+  by said gear will be lost. This patch ensures that defensive gear with physical resistance will take precedence instead.
+
+- When you a press a button the same frame you enter a battle, the input gets saved in a variable which doesn't get reset, meaning that any
+  kind of interaction (e.g. open menu) will still take place automatically after the battle. This has been fixed.
+
+- The Igglanova was given status immunities like the other bosses.
+
+- Fixed up message that shows up when the whole party dies by poison on the field.
+
+- Raja can no longer equip the Psycho Wand so you won't end up losing it when he leaves the party.
+
+- Items and techniques that cure poison, paralysis and death have the effect of restoring agility and dexterity to their original values, but
+  the game doesn't check if the characters are afflicted by those statuses. For example, if you use a Repair Kit on Wren, he will lose all the buffs
+  even if he's alive. This patch ensures that the buffs are not lost if characters are not affected by a status effect.
+
+- Fixed Telepipe and Escapipe being thrown away upon use in battle.
+
+- The dungeon flag is not set all the time for the first screen of Zelan and Kuran. This causes Hinas/Escapipe not to work and you're also able to save.
+  After fixing the flag logic, these problems should be gone.
+
+- Normally characters can gain more than one level if they earn a lot of EXP in one battle. However characters outside the party are limited to gaining only one level
+  per battle regardless of their EXP. This has been changed so everyone can gain multiple levels per battle.

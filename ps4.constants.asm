@@ -56,6 +56,7 @@ skills = $62
 curr_skill_uses = $6A
 max_skill_uses = $6B
 gain_exp_flag = $7A		; byte ; flag which is set if a character participates and wins a battle at least once. After that characters start gaining experience even if they are not in the party
+saved_physical_prop = $7B
 ; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
