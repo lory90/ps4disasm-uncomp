@@ -450,7 +450,7 @@
 
 ; $31
 	dc.b	$F4
-	dc.b	$02
+	dc.b	$01
 	dc.b	"Ah, we're finally home!"
 	dc.b	$FD
 	dc.b	"Shall we take it easy for the"
